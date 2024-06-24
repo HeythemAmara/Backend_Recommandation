@@ -1,0 +1,21 @@
+orangetn_scrapy_persist.reference_global,orangetn_scrapy_persist.reference_detail,orangetn_scrapy_persist.ad_title,orangetn_scrapy_persist.ad_url,orangetn_scrapy_persist.marque,orangetn_scrapy_persist.modele,orangetn_scrapy_persist.ram,orangetn_scrapy_persist.stockage,orangetn_scrapy_persist.couleur,orangetn_scrapy_persist.options,orangetn_scrapy_persist.shop,orangetn_scrapy_persist.ad_stocks,orangetn_scrapy_persist.ad_price,orangetn_scrapy_persist.date_scrapy
+huawei-novay70,huawei-novay70,Huawei Nova Y70,,huawei,nova y70,,,,,orangetn,retired,735.08,2024-01-10
+oppo-a58,oppo-a58,OPPO A58,,oppo,a58,,,,,orangetn,retired,699.0,2024-01-10
+oppo-a77,oppo-a77,OPPO A77,,oppo,a77,,,,,orangetn,retired,749.0,2024-01-10
+oppo-a77s,oppo-a77s,Oppo A77s,,oppo,a77s,,,,,orangetn,retired,949.0,2024-01-10
+xiaomi-redmi102022,xiaomi-redmi102022,Xiaomi Redmi 10 2022,,xiaomi,redmi 10 2022,,,,,orangetn,retired,755.1,2024-01-10
+xiaomi-redmi10c,xiaomi-redmi10c,Xiaomi Redmi 10C,,xiaomi,redmi 10c,,,,,orangetn,retired,720.0,2024-01-10
+xiaomi-redminote12pro,xiaomi-redminote12pro,Xiaomi Redmi Note 12 Pro,,xiaomi,redmi note 12 pro,,,,,orangetn,retired,1399.0,2024-01-10
+oppo-a77,oppo-a77,OPPO A77,,oppo,a77,,,,,orangetn,INSTOCK,749.0,2024-01-10
+oppo-a77s,oppo-a77s,Oppo A77s,,oppo,a77s,,,,,orangetn,INSTOCK,949.0,2024-01-10
+infinix-smart7,infinix-smart7,Infinix Smart 7,,infinix,smart 7,,,,,orangetn,INSTOCK,419.0,2024-01-10
+infinix-note30,infinix-note30,Infinix Note 30,,infinix,note 30,,,,,orangetn,INSTOCK,799.0,2024-01-10
+oppo-a58,oppo-a58,OPPO A58,,oppo,a58,,,,,orangetn,INSTOCK,699.0,2024-01-10
+infinix-hot30i,infinix-hot30i,Infinix Hot 30i,,infinix,hot 30i,,,,,orangetn,INSTOCK,499.0,2024-01-10
+oppo-a38,oppo-a38,OPPO A38,,oppo,a38,,,,,orangetn,INSTOCK,599.0,2024-01-10
+xiaomi-redmi102022,xiaomi-redmi102022,Xiaomi Redmi 10 2022,,xiaomi,redmi 10 2022,,,,,orangetn,INSTOCK,755.1,2024-01-10
+xiaomi-redmi10c,xiaomi-redmi10c,Xiaomi Redmi 10C,,xiaomi,redmi 10c,,,,,orangetn,INSTOCK,720.0,2024-01-10
+huawei-novay70,huawei-novay70,Huawei Nova Y70,,huawei,nova y70,,,,,orangetn,INSTOCK,735.08,2024-01-10
+xiaomi-redminote12,xiaomi-redminote12,Xiaomi Redmi Note 12,,xiaomi,redmi note 12,,,,,orangetn,INSTOCK,919.0,2024-01-10
+samsung-a14,samsung-a14,Samsung A14,,samsung,a14,,,,,orangetn,INSTOCK,699.0,2024-01-10
+xiaomi-redminote12pro,xiaomi-redminote12pro,Xiaomi Redmi Note 12 Pro,,xiaomi,redmi note 12 pro,,,,,orangetn,INSTOCK,1399.0,2024-01-10

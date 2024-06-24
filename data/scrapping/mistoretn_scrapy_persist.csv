@@ -1,0 +1,56 @@
+mistoretn_scrapy_persist.reference_global,mistoretn_scrapy_persist.reference_detail,mistoretn_scrapy_persist.ad_title,mistoretn_scrapy_persist.ad_url,mistoretn_scrapy_persist.marque,mistoretn_scrapy_persist.modele,mistoretn_scrapy_persist.ram,mistoretn_scrapy_persist.stockage,mistoretn_scrapy_persist.couleur,mistoretn_scrapy_persist.options,mistoretn_scrapy_persist.shop,mistoretn_scrapy_persist.ad_stocks,mistoretn_scrapy_persist.ad_price,mistoretn_scrapy_persist.date_scrapy
+xiaomi-redmi12,xiaomi-redmi12,Redmi 12,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 12,,,,,mistoretn,retired,409.0,2023-11-11
+xiaomi-redminote12,xiaomi-redminote12,Redmi Note 12,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12,,,,,mistoretn,retired,739.0,2023-11-11
+xiaomi-redminote12pro5g,xiaomi-redminote12pro5g,Redmi Note 12 Pro+ (5G),https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12 pro 5g,,,,,mistoretn,retired,1199.0,2023-11-11
+xiaomi-redminote11pro,xiaomi-redminote11pro,Redmi Note 11 Pro,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 11 pro,,,,,mistoretn,retired,418.0,2023-11-11
+xiaomi-redminote12pro,xiaomi-redminote12pro,Redmi Note 12 Pro,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12 pro,,,,,mistoretn,retired,959.0,2023-11-11
+xiaomi-redminote12s,xiaomi-redminote12s,Redmi Note 12S,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12s,,,,,mistoretn,retired,1399.0,2023-11-11
+xiaomi-pocom4pro,xiaomi-pocom4pro,Poco M4 Pro,https://mistore.com.tn/product-category/smartphone-poco/,xiaomi,poco m4 pro,,,,,mistoretn,INSTOCK,1099.0,28/01/2024
+xiaomi-redmi10,xiaomi-redmi10,Redmi 10,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 10,,,,,mistoretn,INSTOCK,279.0,28/01/2024
+xiaomi-redmi10c,xiaomi-redmi10c,Redmi 10C,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 10c,,,,,mistoretn,INSTOCK,349.0,28/01/2024
+xiaomi-redmi12,xiaomi-redmi12,Redmi 12 (4+128G) (8+128G) (8+256G),https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 12,,,,,mistoretn,INSTOCK,409.0,28/01/2024
+xiaomi-redmi12c,xiaomi-redmi12c,Redmi 12C,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 12c,,,,,mistoretn,INSTOCK,509.0,28/01/2024
+xiaomi-redmi13c,xiaomi-redmi13c,Redmi 13C (4+128G) (6+128G) (8+256G),https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 13c,,,,,mistoretn,INSTOCK,609.0,28/01/2024
+xiaomi-redmi9a,xiaomi-redmi9a,Redmi 9A,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 9a,,,,,mistoretn,INSTOCK,399.0,28/01/2024
+xiaomi-redmi9c,xiaomi-redmi9c,REDMI 9C,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 9c,,,,,mistoretn,INSTOCK,309.0,28/01/2024
+xiaomi-redmi9t,xiaomi-redmi9t,REDMI 9T,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 9t,,,,,mistoretn,INSTOCK,749.0,28/01/2024
+xiaomi-redmia1,xiaomi-redmia1,Redmi A1+,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi a1,,,,,mistoretn,INSTOCK,719.0,28/01/2024
+xiaomi-redmia2,xiaomi-redmia2,Redmi A2+,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi a2,,,,,mistoretn,INSTOCK,389.0,28/01/2024
+xiaomi-redminote11pro,xiaomi-redminote11pro,Redmi Note 11 Pro (6+128G) (8+128G),https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 11 pro,,,,,mistoretn,INSTOCK,418.0,28/01/2024
+xiaomi-redminote12,xiaomi-redminote12,Redmi Note 12 (4+128G) (6+128G) (8+128G) (8+256G),https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12,,,,,mistoretn,INSTOCK,679.0,28/01/2024
+xiaomi-redminote12pro5g,xiaomi-redminote12pro5g,Redmi Note 12 Pro+ (5G) (8+256G),https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12 pro 5g,,,,,mistoretn,INSTOCK,1199.0,28/01/2024
+xiaomi-redminote12pro,xiaomi-redminote12pro,Redmi Note 12 Pro (6+128G) (8+128G) (8+256G),https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12 pro,,,,,mistoretn,INSTOCK,929.0,28/01/2024
+xiaomi-redminote12s,xiaomi-redminote12s,Redmi Note 12S (8+256G),https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12s,,,,,mistoretn,INSTOCK,1399.0,28/01/2024
+xiaomi-redminote13,xiaomi-redminote13,Redmi Note 13 (6+128G) (8+128G) (8+256G),https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi note 13,,,,,mistoretn,INSTOCK,559.0,28/01/2024
+xiaomi-redminote13pro,xiaomi-redminote13pro,Redmi Note 13 Pro (8+256G) (12+512G),https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi note 13 pro,,,,,mistoretn,INSTOCK,479.0,28/01/2024
+xiaomi-redminote13proplus5g,xiaomi-redminote13proplus5g,Redmi Note 13 Pro Plus 5G (8+256G) (12+512G),https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi note 13 pro plus 5g,,,,,mistoretn,INSTOCK,599.0,28/01/2024
+xiaomi-12,xiaomi-12,Xiaomi 12,https://mistore.com.tn/product-category/xiaomi/,xiaomi,12,,,,,mistoretn,INSTOCK,4498.0,2023-11-11
+xiaomi-12pro,xiaomi-12pro,Xiaomi 12 Pro,https://mistore.com.tn/product-category/xiaomi/,xiaomi,12 pro,,,,,mistoretn,INSTOCK,4757.0,2023-11-11
+xiaomi-11lite5gne,xiaomi-11lite5gne,Xiaomi 11 Lite 5G NE,https://mistore.com.tn/product-category/xiaomi/,xiaomi,11 lite 5g ne,,,,,mistoretn,INSTOCK,5298.0,2023-11-11
+xiaomi-11t,xiaomi-11t,XIAOMI 11 T,https://mistore.com.tn/product-category/xiaomi/,xiaomi,11 t,,,,,mistoretn,INSTOCK,5557.0,2023-11-11
+xiaomi-11tpro,xiaomi-11tpro,XIAOMI 11 T Pro,https://mistore.com.tn/product-category/xiaomi/,xiaomi,11 t pro,,,,,mistoretn,INSTOCK,2899.0,2023-11-11
+xiaomi-pocom4pro,xiaomi-pocom4pro,Poco M4 Pro,https://mistore.com.tn/product-category/smartphone-poco/,xiaomi,poco m4 pro,,,,,mistoretn,INSTOCK,1129.0,2023-11-11
+xiaomi-redminote12,xiaomi-redminote12,Redmi Note 12,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12,,,,,mistoretn,INSTOCK,739.0,2023-11-11
+xiaomi-redmi102022,xiaomi-redmi102022,Redmi 10 (2022),https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 10 2022,,,,,mistoretn,INSTOCK,509.0,2023-11-11
+xiaomi-pocof3,xiaomi-pocof3,POCO F3,https://mistore.com.tn/product-category/smartphone-poco/,xiaomi,poco f3,,,,,mistoretn,INSTOCK,1229.0,2023-11-11
+xiaomi-pocox3pro,xiaomi-pocox3pro,POCO X3 Pro,https://mistore.com.tn/product-category/smartphone-poco/,xiaomi,poco x3 pro,,,,,mistoretn,INSTOCK,1329.0,2023-11-11
+xiaomi-redminote12pro,xiaomi-redminote12pro,Redmi Note 12 Pro,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12 pro,,,,,mistoretn,INSTOCK,959.0,2023-11-11
+xiaomi-redminote12pro5g,xiaomi-redminote12pro5g,Redmi Note 12 Pro+ (5G),https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12 pro 5g,,,,,mistoretn,INSTOCK,1199.0,2023-11-11
+xiaomi-redminote12s,xiaomi-redminote12s,Redmi Note 12S,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 12s,,,,,mistoretn,INSTOCK,1399.0,2023-11-11
+xiaomi-redminote10pro,xiaomi-redminote10pro,Redmi Note 10 Pro,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 10 pro,,,,,mistoretn,INSTOCK,274.0,2023-11-11
+xiaomi-redminote10s,xiaomi-redminote10s,Redmi Note 10S,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 10s,,,,,mistoretn,INSTOCK,424.0,2023-11-11
+xiaomi-redminote11,xiaomi-redminote11,Redmi Note 11,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 11,,,,,mistoretn,INSTOCK,390.0,2023-11-11
+xiaomi-redmi10a,xiaomi-redmi10a,Redmi 10A,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 10a,,,,,mistoretn,INSTOCK,609.0,2023-11-11
+xiaomi-redmi12,xiaomi-redmi12,Redmi 12,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 12,,,,,mistoretn,INSTOCK,409.0,2023-11-11
+xiaomi-redmi12c,xiaomi-redmi12c,Redmi 12C,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 12c,,,,,mistoretn,INSTOCK,529.0,2023-11-11
+xiaomi-redmia1,xiaomi-redmia1,Redmi A1+,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi a1,,,,,mistoretn,INSTOCK,609.0,2023-11-11
+xiaomi-redmia2,xiaomi-redmia2,Redmi A2+,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi a2,,,,,mistoretn,INSTOCK,719.0,2023-11-11
+xiaomi-redmi10,xiaomi-redmi10,Redmi 10,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 10,,,,,mistoretn,INSTOCK,389.0,2023-11-11
+xiaomi-redminote11pro,xiaomi-redminote11pro,Redmi Note 11 Pro,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 11 pro,,,,,mistoretn,INSTOCK,418.0,2023-11-11
+xiaomi-redminote11pro5g,xiaomi-redminote11pro5g,Redmi Note 11 Pro 5G,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 11 pro 5g,,,,,mistoretn,INSTOCK,1159.0,2023-11-11
+xiaomi-redminote11s,xiaomi-redminote11s,Redmi Note 11S,https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 11s,,,,,mistoretn,INSTOCK,1219.0,2023-11-11
+xiaomi-redminote82021,xiaomi-redminote82021,REDMI NOTE 8 (2021),https://mistore.com.tn/product-category/redmi-note/,xiaomi,redmi note 8 2021,,,,,mistoretn,INSTOCK,929.0,2023-11-11
+xiaomi-redmi9a,xiaomi-redmi9a,Redmi 9A,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 9a,,,,,mistoretn,INSTOCK,559.0,2023-11-11
+xiaomi-redmi9c,xiaomi-redmi9c,REDMI 9C,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 9c,,,,,mistoretn,INSTOCK,279.0,2023-11-11
+xiaomi-redmi10c,xiaomi-redmi10c,Redmi 10C,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 10c,,,,,mistoretn,INSTOCK,399.0,2023-11-11
+xiaomi-redmi9t,xiaomi-redmi9t,REDMI 9T,https://mistore.com.tn/product-category/smartphone-redmi/,xiaomi,redmi 9t,,,,,mistoretn,INSTOCK,309.0,2023-11-11
