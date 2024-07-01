@@ -1,4 +1,5 @@
 import logging
+from collections import Counter
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -61,39 +62,37 @@ def api_filters(df):
 
 
 def api_primini_filters(product_data):
-    # Extract the unique filters from the product data
-    unique_stocks = set()
-    unique_couleur = set()
-    unique_shops = set()
-    sorted_marques = set()
+    stock_counter = Counter()
+    couleur_counter = Counter()
+    shop_counter = Counter()
+    marque_counter = Counter()
 
+    # Extract the unique filters and count occurrences
     for product in product_data:
-        # Skip empty values
         if product['stocks']:
-            unique_stocks.update(filter(None, product['stocks']))
+            stock_counter.update(filter(None, product['stocks']))
         if product['couleur']:
-            unique_couleur.add(product['couleur'])
+            couleur_counter[product['couleur']] += 1
         if product['shop']:
-            unique_shops.update(filter(None, product['shop']))
+            shop_counter.update(filter(None, product['shop']))
         if product['marque']:
-            sorted_marques.add(product['marque'])
-
-    sorted_marques = sorted(sorted_marques)
+            marque_counter[product['marque']] += 1
 
     # Determine the minimum and maximum prices
     max_ad_price = max(product['max_price'] for product in product_data)
     min_ad_price = min(product['min_price'] for product in product_data)
 
-    # Prepare the data for the API response
+    # Convert counters to the required format
+    def counter_to_list(counter):
+        return sorted([{"name": name, "count": count} for name, count in counter.items()], key=lambda x: x["name"])
+
     result = {
-        "max_ad_price": max_ad_price,
-        "min_ad_price": min_ad_price,
-        "ram": [],
-        "stockage": [],
-        "ad_stocks": list(unique_stocks),
-        "couleur": list(unique_couleur),
-        "shop": list(unique_shops),
-        "marque": sorted_marques
+        "max_price": max_ad_price,
+        "min_price": min_ad_price,
+        "stocks": counter_to_list(stock_counter),
+        "couleur": counter_to_list(couleur_counter),
+        "shop": counter_to_list(shop_counter),
+        "marque": counter_to_list(marque_counter)
     }
 
     return result
@@ -187,3 +186,101 @@ def api_filters_primini_update(rawdata, filters):
             return filtered_data
 
     return filtered_data
+
+
+def is_within_price_range(product, price_min, price_max):
+    return (price_min <= product['min_price'] <= price_max or
+            price_min <= product['max_price'] <= price_max)
+
+
+def has_required_stock(product, stock_filter):
+    return not stock_filter or any(stock in stock_filter for stock in product['stocks'])
+
+
+def has_required_shop(product, shop_filter):
+    return not shop_filter or any(shop in shop_filter for shop in product['shop'])
+
+
+def has_required_marque(product, marque_filter):
+    return not marque_filter or product['marque'] in marque_filter
+
+
+def has_required_color(product, color_filter):
+    return not color_filter or product['couleur'] in color_filter
+
+
+def filter_products(product_data, givf):
+    # Extract filters from givf
+    price_min, price_max = givf.get("priceRange", [0, float("inf")])
+    stock_filter = set(givf.get("stocks", []))
+    shop_filter = set(givf.get("shop", []))
+    marque_filter = set(givf.get("marque", []))
+    color_filter = set(givf.get("color", []))
+
+    # Filter product data based on givf
+    filtered_products = []
+    for product in product_data:
+        if not is_within_price_range(product, price_min, price_max):
+            continue
+        if not has_required_stock(product, stock_filter):
+            continue
+        if not has_required_shop(product, shop_filter):
+            continue
+        if not has_required_marque(product, marque_filter):
+            continue
+        if not has_required_color(product, color_filter):
+            continue
+        filtered_products.append(product)
+
+    return filtered_products
+
+
+def convert_to_list(thelist):
+    oldfnameslist = []
+    for oldfnames in thelist:
+        oldfnameslist.append(oldfnames["name"])
+    return oldfnameslist
+
+
+def update_counts_with_filters(product_data, givf, oldf, exif):
+    # Filter products based on givf
+    filtered_products = filter_products(product_data, givf)
+
+    # Initialize counters
+    couleur_counter = Counter()
+    shop_counter = Counter()
+    marque_counter = Counter()
+    stock_counter = Counter()
+
+    # Count occurrences in filtered data
+    for product in filtered_products:
+        if product['stocks']:
+            stock_counter.update(filter(None, product['stocks']))
+        if product['couleur']:
+            couleur_counter[product['couleur']] += 1
+        if product['shop']:
+            shop_counter.update(filter(None, product['shop']))
+        if product['marque']:
+            marque_counter[product['marque']] += 1
+
+    # Convert counters to the required format
+    def counter_to_list(counter, exif_list):
+        exif_names = {item["name"] for item in exif_list}
+        result_list = [{"name": name, "count": counter.get(name, 0)} for name in exif_names]
+        return result_list
+
+    # Update exif with new counts
+    if convert_to_list(oldf["stocks"]) != givf["stocks"]:
+        print("stocks\t true")
+        exif["stocks"] = counter_to_list(stock_counter, exif["stocks"])
+    if convert_to_list(oldf["couleur"]) != givf["color"]:
+        print("color\t true")
+        exif["couleur"] = counter_to_list(couleur_counter, exif["couleur"])
+    if convert_to_list(oldf["shop"]) != givf["shop"]:
+        print("shop\t true")
+        exif["shop"] = counter_to_list(shop_counter, exif["shop"])
+    if convert_to_list(oldf["marque"]) != givf["marque"]:
+        print("marque\t true")
+        exif["marque"] = counter_to_list(marque_counter, exif["marque"])
+
+    return exif

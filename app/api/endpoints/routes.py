@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Request, Body
 
 from app.services.primini_service import get_primini_data, get_specific_range_primini_data
 from app.services.product_service import get_180_csv_data
-from app.services.filter_service import api_filters, api_primini_filters
+from app.services.filter_service import api_filters, api_primini_filters, update_counts_with_filters
 from app.services.csv_service import read_scrapping_csv_data, read_primini_csv_data, compaire_csv_data
 from app.services.filter_service import api_filters_update, api_filters_primini_update
 from pydantic import BaseModel
@@ -39,6 +39,7 @@ class PriminiDataRequest(BaseModel):
 async def read_primini(request: PriminiDataRequest = Body(...)):
     try:
         data = get_specific_range_primini_data(request.start, read_primini_csv_data())
+        print(len(read_primini_csv_data()))
         return data
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -66,12 +67,19 @@ async def filter_csv():
 async def filter_primini_update(request: Request):
     try:
         filters = await request.json()
+        selected_filter_value = filters[0]
+        old_filter_value = filters[1]
         rawdata = get_primini_data(read_primini_csv_data())
-        filtered_data = api_filters_primini_update(rawdata, filters)
-        newfilters =api_primini_filters(filtered_data)
+        filtered_data = api_filters_primini_update(rawdata, selected_filter_value)
+        exif = api_primini_filters(get_primini_data(read_primini_csv_data()))
+        newfilters = update_counts_with_filters(rawdata, selected_filter_value, old_filter_value, exif)
+        print("HERE old_filter_value\t", old_filter_value)
+        print("HERE newfilters      \t", newfilters)
         result = {
             'filtered_data': filtered_data,
-            'newfilters': newfilters
+            'newfilters': newfilters,
+            'filters[0]': filters[0],
+            'filters[1]': filters[1]
         }
         return result
     except Exception as e:

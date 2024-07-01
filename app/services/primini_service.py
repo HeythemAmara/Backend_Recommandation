@@ -24,10 +24,8 @@ def process_fournisseur(fournisseur_str):
             parts = entry.split(':')
             count = 2  # ! TO REMOVE
             if len(parts) == 2:
-                shop_list.append(parts[0].strip())
+                shop_list.append(parts[0].strip().lower())
                 ad_titles_list.append(parts[1].strip())
-            else:
-                logger.error(f"Invalid fournisseur entry: {entry}")
         else:  # ! TO REMOVE
             count = 1  # ! TO REMOVE
     return shop_list, ad_titles_list
@@ -74,6 +72,24 @@ def extract_modele(titre_article, couleur, marque):
     return modele
 
 
+def eliminate_duplicates(shop_list, ad_titles_list, stocks_list, prix_detail_list):
+    unique_shops = {}
+    for i, shop in enumerate(shop_list):
+        if shop not in unique_shops:
+            unique_shops[shop] = {
+                'ad_title': ad_titles_list[i],
+                'stock': stocks_list[i],
+                'prix_detail': prix_detail_list[i]
+            }
+    # Extracting the unique values
+    shops = list(unique_shops.keys())
+    ad_titles = [unique_shops[shop]['ad_title'] for shop in shops]
+    stocks = [unique_shops[shop]['stock'] for shop in shops]
+    prix_details = [unique_shops[shop]['prix_detail'] for shop in shops]
+
+    return shops, ad_titles, stocks, prix_details
+
+
 def get_primini_data(df, max_rows=None):
     result = []
     for _, row in df.iterrows():
@@ -90,10 +106,21 @@ def get_primini_data(df, max_rows=None):
         shop_list, ad_titles_list = process_fournisseur(row['fournisseur'])
         stocks_list = row['stocks'].split(',')
 
+        if not (len(shop_list) == len(ad_titles_list) == len(stocks_list) == len(prix_detail_list)):
+            logger.error(f"Data length mismatch in row {row['titre_article']}:"
+                         f"shops({len(shop_list)}), ad_titles({len(ad_titles_list)}),"
+                         f"stocks({len(stocks_list)}), prix_detail({len(prix_detail_list)})")
+            continue  # Skip rows with mismatched data lengths
+
         brand_found = identify_brand(row['titre_article'])
         color_found = identify_color(row['titre_article'])
 
         modele = extract_modele(row['titre_article'], color_found, brand_found)
+
+        # Eliminate duplicated shops with their corresponding details
+        shop_list, ad_titles_list, stocks_list, prix_detail_list = eliminate_duplicates(
+            shop_list, ad_titles_list, stocks_list, prix_detail_list
+        )
 
         product_data = {
             "titre_article": row['titre_article'],
@@ -118,7 +145,6 @@ def get_primini_data(df, max_rows=None):
 
 
 def get_specific_range_primini_data(start, lists):
-    # Calculate the actual range based on the total available data
     actual_start = max(0, start * 180)
     actual_end = min(len(lists), start * 180 + 180)
     max_rows = actual_end - actual_start

@@ -65,13 +65,8 @@ def read_primini_csv_data():
 
     for file in csv_files:
         file_path = os.path.join(csv_dir, file)
-        #logger.info(f"Reading file: {file_path}")
         df = pd.read_csv(file_path)
-
-        # Replace NaN values with None
         df = df.where(pd.notnull(df), '')
-
-        #logger.info(f"File {file_path} read successfully with {len(df)} records.")
         all_data.extend(df.to_dict('records'))
 
     if not all_data:
@@ -80,15 +75,6 @@ def read_primini_csv_data():
 
     # Convert list of dicts to DataFrame for further processing
     df_all = pd.DataFrame(all_data)
-    #logger.info("DataFrame created")
-
-    """
-    df_all['price'] = df_all['price'].str.replace('DT', '')
-    df_all['price'] = df_all['price'].str.replace(' ', '')
-    
-    df_all = df_all.sort_values(by='date_scrapy', ascending=False)
-    """
-
     return df_all
 
 
