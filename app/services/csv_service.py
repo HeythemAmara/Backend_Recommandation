@@ -77,28 +77,3 @@ def read_primini_csv_data():
     df_all = pd.DataFrame(all_data)
     return df_all
 
-
-def compaire_csv_data():
-    df_primini = read_primini_csv_data()
-    df_scrapping = read_scrapping_csv_data()
-
-    # Compare the 'ad_title' values
-    primini_titles = df_primini['titre_article'].tolist()
-    scrapping_titles = df_scrapping['ad_title'].tolist()
-
-    similar_titles = set(primini_titles) & set(scrapping_titles)
-    num_similar_titles = len(similar_titles)
-    total_titles = len(set(primini_titles)) + len(set(scrapping_titles)) - num_similar_titles
-    similarity_percentage = (num_similar_titles / total_titles) * 100
-
-    #logger.info(f"Number of similar ad_title values: {num_similar_titles}")
-    #logger.info(f"Percentage of similarity: {similarity_percentage:.2f}%")
-
-    result = {
-        "primini titles": len(primini_titles),
-        "scrapping titles": len(scrapping_titles),
-        "num similar titles": num_similar_titles,
-        "similaritypercentage": similarity_percentage,
-    }
-
-    return result

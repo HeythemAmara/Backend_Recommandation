@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException, Request, Body
 from app.services.primini_service import get_primini_data, get_specific_range_primini_data
 from app.services.product_service import get_180_csv_data
 from app.services.filter_service import api_filters, api_primini_filters, update_counts_with_filters
-from app.services.csv_service import read_scrapping_csv_data, read_primini_csv_data, compaire_csv_data
+from app.services.csv_service import read_scrapping_csv_data, read_primini_csv_data
 from app.services.filter_service import api_filters_update, api_filters_primini_update
 from pydantic import BaseModel
 from typing import List
@@ -77,9 +77,7 @@ async def filter_primini_update(request: Request):
         print("HERE newfilters      \t", newfilters)
         result = {
             'filtered_data': filtered_data,
-            'newfilters': newfilters,
-            'filters[0]': filters[0],
-            'filters[1]': filters[1]
+            'newfilters': newfilters
         }
         return result
     except Exception as e:
@@ -98,10 +96,10 @@ async def filter_update(request: Request):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.get("/compaire")
-async def compaire():
+@router.get("/test")
+async def filter_csv():
     try:
-        data = compaire_csv_data()
+        data =get_primini_data(read_primini_csv_data())
         return data
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

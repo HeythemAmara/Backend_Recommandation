@@ -162,7 +162,7 @@ def filter_by_color(item, color_filter):
 
 def api_filters_primini_update(rawdata, filters):
     price_range = filters.get("priceRange", [0, float("inf")])
-    status_filter = filters.get("status", [])
+    status_filter = filters.get("stocks", [])
     shop_filter = filters.get("shop", [])
     marque_filter = filters.get("marque", [])
     color_filter = filters.get("color", [])
